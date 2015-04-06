@@ -3,8 +3,23 @@
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
-CKEDITOR.editorConfig = function( config ) {
-	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
-};
+CKEDITOR.editorConfig = function(config) {
+    config.language = 'en';
+    config.toolbar_Pure = [
+      {
+        name: 'basicstyles',
+        items: ['Bold', 'Italic', 'Underline', 'Strike']
+      }, {
+        name: 'paragraph',
+        items: ['NumberedList', 'BulletedList']
+      }, {
+        name: 'links',
+        items: ['Link', 'Unlink']
+      }, {
+        name: 'styles',
+        items: ['Format', 'Font', 'FontSize']
+      }
+    ];
+    config.toolbar = 'Pure';
+    return true;
+  };
